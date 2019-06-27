@@ -5,44 +5,127 @@ import cProfile
 
 combinaisonsFilepath = os.path.join(os.path.dirname(__file__), 'valid_combinaisons_no_underscore_no_semicolon.txt')
 
-PLAYERS = (
-    (618.22, 'axel.tran'),
-    (264.59, 'nicola.lugnani'),
-    (83.45, 'renaud.danflous'),
-    (22.16, 'bastien.laby'),
-    (18.72, 'vincent.kauffman'),
-    (13.78, 'pierre.bustingory'),
-    (8, 'maxime.philippon'),
-    (1.99, 'samuel.durand'),
-)
+
+def getCombinaisonRounds(combinaisonStr):
+    '''
+    Return the string combinaison into a list of list of integers.
+    '''
+    return [[int(i) - 1 for i in combinaisonStr[k:k+8]] for k in [0, 8, 16, 24, 32, 40, 48]]
 
 
-PAIRS_AVERAGES = []
+class Player(object):
+    def __init__(self, name, score):
+        self.name = name
+        self.score = score
 
 
-def getAverage(idx1, idx2):
-    global PAIRS_AVERAGES
-    try:
-        return PAIRS_AVERAGES[idx1][idx2]
-    except IndexError:
+class Pool(object):
+    def __init__(self, poolName, p1, p2, p3, p4, p5, p6, p7, p8):
+        self.name = poolName
+        self.players = (p1, p2, p3, p4, p5, p6, p7, p8)
+        self.bestCombinaison = None
+        self.bestCombinaisonScore = None
+        self.averages = []
+
+    def computeAverages(self):
         for i in range(0, 8):
-            PAIRS_AVERAGES.append([])
+            self.averages.append([])
             for j in range(0, 8):
-                PAIRS_AVERAGES[i].append((PLAYERS[i][0] + PLAYERS[j][0]) / 2.0)
-        return PAIRS_AVERAGES[idx1][idx2]
+                self.averages[i].append((self.players[i].score + self.players[j].score) / 2.0)
+    
+    def getAverage(self, i, j):
+        return self.averages[i][j]
+    
+    def considerCombinaison(self, combinaisonStr):
+        '''
+        Consider the given combinaison, and keep its results if this is a better combinaison than the one already stored.
+        '''
+        score = 0
+        for r in getCombinaisonRounds(combinaisonStr):
+            score += abs(self.getAverage(r[0], r[1]) - self.getAverage(r[2], r[3])) + abs(self.getAverage(r[4], r[5]) - self.getAverage(r[6], r[7]))
+            # score += 0
+        if not self.bestCombinaison or score < self.bestCombinaisonScore:
+            self.bestCombinaison = combinaisonStr
+            self.bestCombinaisonScore = score
+    
+    def printResults(self):
+
+        print 'Pool %s' % self.name
+        print 'Best combinaison : %s (%s)' % (self.bestCombinaison, self.bestCombinaisonScore)
+        for r, pairs in enumerate(getCombinaisonRounds(self.bestCombinaison)):
+            print 'Round %s' % r
+            print '\t%s / %s VS %s / %s' % (self.players[pairs[0]].name, self.players[pairs[1]].name, self.players[pairs[2]].name, self.players[pairs[3]].name)
+            print '\t%s / %s VS %s / %s' % (self.players[pairs[4]].name, self.players[pairs[5]].name, self.players[pairs[6]].name, self.players[pairs[7]].name)
 
 
-def getRounds(combinaisonStr):
-    return [[0, 2, 1, 3, 4, 7, 5, 6], [0, 4, 1, 5, 2, 6, 3, 7], [0, 7, 1, 6, 2, 5, 3, 4], [0, 1, 2, 3, 4, 6, 5, 7], [0, 3, 1, 2, 4, 5, 6, 7], [0, 5, 1, 4, 2, 7, 3, 6], [0, 6, 1, 7, 2, 4, 3, 5]]
-    # return [[int(i) - 1 for i in combinaisonStr[k:k+8]] for k in [0, 8, 16, 24, 32, 40, 48]]
-
-
-def getCombinaisonScore(combinaisonStr):
-    score = 0
-    for r in getRounds(combinaisonStr):
-        # score += abs(getAverage(r[0], r[1]) - getAverage(r[2], r[3])) + abs(getAverage(r[4], r[5]) - getAverage(r[6], r[7]))
-        score += 0
-    return score
+POOLS = (
+    Pool(
+        'deb_hommes',
+        Player('axel.tran', 618.22),
+        Player('nicola.lugnani', 264.59),
+        Player('renaud.danflous', 83.45),
+        Player('bastien.laby', 22.16),
+        Player('vincent.kauffman', 18.72),
+        Player('pierre.bustingory', 13.78),
+        Player('maxime.philippon', 8),
+        Player('samuel.durand', 1.99) 
+    ),
+    # Pool(
+    #     'int_hommes',
+    #     Player('axel.tran', 618.22),
+    #     Player('nicola.lugnani', 264.59),
+    #     Player('renaud.danflous', 83.45),
+    #     Player('bastien.laby', 22.16),
+    #     Player('vincent.kauffman', 18.72),
+    #     Player('pierre.bustingory', 13.78),
+    #     Player('maxime.philippon', 8),
+    #     Player('samuel.durand', 1.99) 
+    # ),
+    # Pool(
+    #     'int_femmes',
+    #     Player('axel.tran', 618.22),
+    #     Player('nicola.lugnani', 264.59),
+    #     Player('renaud.danflous', 83.45),
+    #     Player('bastien.laby', 22.16),
+    #     Player('vincent.kauffman', 18.72),
+    #     Player('pierre.bustingory', 13.78),
+    #     Player('maxime.philippon', 8),
+    #     Player('samuel.durand', 1.99) 
+    # ),
+    # Pool(
+    #     'comp_hommes_1',
+    #     Player('axel.tran', 618.22),
+    #     Player('nicola.lugnani', 264.59),
+    #     Player('renaud.danflous', 83.45),
+    #     Player('bastien.laby', 22.16),
+    #     Player('vincent.kauffman', 18.72),
+    #     Player('pierre.bustingory', 13.78),
+    #     Player('maxime.philippon', 8),
+    #     Player('samuel.durand', 1.99) 
+    # ),
+    # Pool(
+    #     'comp_hommes_2',
+    #     Player('axel.tran', 618.22),
+    #     Player('nicola.lugnani', 264.59),
+    #     Player('renaud.danflous', 83.45),
+    #     Player('bastien.laby', 22.16),
+    #     Player('vincent.kauffman', 18.72),
+    #     Player('pierre.bustingory', 13.78),
+    #     Player('maxime.philippon', 8),
+    #     Player('samuel.durand', 1.99) 
+    # ),
+    # Pool(
+    #     'comp_femmes',
+    #     Player('axel.tran', 618.22),
+    #     Player('nicola.lugnani', 264.59),
+    #     Player('renaud.danflous', 83.45),
+    #     Player('bastien.laby', 22.16),
+    #     Player('vincent.kauffman', 18.72),
+    #     Player('pierre.bustingory', 13.78),
+    #     Player('maxime.philippon', 8),
+    #     Player('samuel.durand', 1.99) 
+    # ),
+)
 
 
 def main():
@@ -51,23 +134,14 @@ def main():
     with open(combinaisonsFilepath, 'r') as f:
         combinaisons = f.readlines()
 
-    combinaisonsScores = []
-    for c, combinaison in enumerate(combinaisons):
-        combinaisonsScores.append(getCombinaisonScore(combinaison))
-        if not c % 10000:
-            print c * 100 / float(len(combinaisons))
-
-    minScore = min(combinaisonsScores)
-    maxScore = max(combinaisonsScores)
-    bestCombinaison = combinaisons[combinaisonsScores.index(minScore)]
-
-    print 'maxScore', maxScore, '(%s)' % bestCombinaison.strip('\n')
-    print 'minScore', minScore, '(%s)' % combinaisons[combinaisonsScores.index(minScore)].strip('\n')
-
-    for r, pairs in enumerate(getRounds(bestCombinaison)):
-        print 'Round %s' % r
-        print '\t%s / %s VS %s / %s' % (PLAYERS[pairs[0]][1], PLAYERS[pairs[1]][1], PLAYERS[pairs[2]][1], PLAYERS[pairs[3]][1])
-        print '\t%s / %s VS %s / %s' % (PLAYERS[pairs[4]][1], PLAYERS[pairs[5]][1], PLAYERS[pairs[6]][1], PLAYERS[pairs[7]][1])
+    for pool in POOLS:
+        print 'Compute pool %s' % pool.name
+        pool.computeAverages()
+        for c, combinaison in enumerate(combinaisons):
+            pool.considerCombinaison(combinaison)
+            if not c % 10000:
+                print c * 100 / float(len(combinaisons))
+        pool.printResults()
 
     #TODO :
     # - Build UI with inputs for PLAYERS and score
