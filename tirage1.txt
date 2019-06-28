@@ -1,0 +1,139 @@
+Pool HOMMES - Débutant - Poule A
+Round 1
+        Olivier HERBIN / Cédric PETIT GALLEY VS Enguerran BERNARD / Stevens BARGOT
+        Denis TRIPIER / VIDE2 VS Gérard LE GOUIL / VIDE1
+Round 2
+        Olivier HERBIN / Stevens BARGOT VS Enguerran BERNARD / Cédric PETIT GALLEY
+        Denis TRIPIER / VIDE1 VS Gérard LE GOUIL / VIDE2
+Round 3
+        Olivier HERBIN / VIDE1 VS Enguerran BERNARD / VIDE2
+        Cédric PETIT GALLEY / Gérard LE GOUIL VS Stevens BARGOT / Denis TRIPIER
+Round 4
+        Olivier HERBIN / Denis TRIPIER VS Enguerran BERNARD / Gérard LE GOUIL
+        Cédric PETIT GALLEY / VIDE2 VS Stevens BARGOT / VIDE1
+Round 5
+        Olivier HERBIN / Enguerran BERNARD VS Cédric PETIT GALLEY / Stevens BARGOT
+        Denis TRIPIER / Gérard LE GOUIL VS VIDE1 / VIDE2
+Round 6 (ANNULÉ)
+        Olivier HERBIN / VIDE2 VS Cédric PETIT GALLEY / Denis TRIPIER
+        Enguerran BERNARD / VIDE1 VS Stevens BARGOT / Gérard LE GOUIL
+Round 7 (ANNULÉ)
+        Olivier HERBIN / Gérard LE GOUIL VS Cédric PETIT GALLEY / VIDE1
+        Enguerran BERNARD / Denis TRIPIER VS Stevens BARGOT / VIDE2
+
+Pool HOMMES - Intermédiaire - Poule A
+Round 1
+        Bruno DE BASTIANI / Maxime RAGOT VS Jean-Marc BARBAGGIO / Thierry BRIEN
+        Aurélien BRAULT / Mickaël DHOURY VS Nouredine SALEH / Guillaume LESPAGNOL
+Round 2
+        Bruno DE BASTIANI / Mickaël DHOURY VS Maxime RAGOT / Aurélien BRAULT
+        Jean-Marc BARBAGGIO / Guillaume LESPAGNOL VS Thierry BRIEN / Nouredine SALEH
+Round 3
+        Bruno DE BASTIANI / Nouredine SALEH VS Maxime RAGOT / Guillaume LESPAGNOL
+        Jean-Marc BARBAGGIO / Aurélien BRAULT VS Thierry BRIEN / Mickaël DHOURY
+Round 4
+        Bruno DE BASTIANI / Thierry BRIEN VS Jean-Marc BARBAGGIO / Maxime RAGOT
+        Aurélien BRAULT / Guillaume LESPAGNOL VS Nouredine SALEH / Mickaël DHOURY
+Round 5
+        Bruno DE BASTIANI / Guillaume LESPAGNOL VS Jean-Marc BARBAGGIO / Mickaël DHOURY
+        Maxime RAGOT / Nouredine SALEH VS Thierry BRIEN / Aurélien BRAULT
+Round 6
+        Bruno DE BASTIANI / Aurélien BRAULT VS Jean-Marc BARBAGGIO / Nouredine SALEH
+        Maxime RAGOT / Mickaël DHOURY VS Thierry BRIEN / Guillaume LESPAGNOL
+Round 7
+        Bruno DE BASTIANI / Jean-Marc BARBAGGIO VS Maxime RAGOT / Thierry BRIEN
+        Aurélien BRAULT / Nouredine SALEH VS Guillaume LESPAGNOL / Mickaël DHOURY
+
+Pool FEMMES - Intermédiaire - Poule A
+Round 1
+        Marie BOURE / Yilin ZHOU VS Corinne BERTHELOT / Noémie PAJOT
+        Pierrette MILOT / VIDE2 VS Isabelle LOREAL / VIDE1
+Round 2
+        Marie BOURE / VIDE2 VS Yilin ZHOU / Pierrette MILOT
+        Corinne BERTHELOT / VIDE1 VS Noémie PAJOT / Isabelle LOREAL
+Round 3
+        Marie BOURE / Isabelle LOREAL VS Yilin ZHOU / VIDE1
+        Corinne BERTHELOT / Pierrette MILOT VS Noémie PAJOT / VIDE2
+Round 4
+        Marie BOURE / Noémie PAJOT VS Corinne BERTHELOT / Yilin ZHOU
+        Pierrette MILOT / VIDE1 VS Isabelle LOREAL / VIDE2
+Round 5
+        Marie BOURE / VIDE1 VS Corinne BERTHELOT / VIDE2
+        Yilin ZHOU / Isabelle LOREAL VS Noémie PAJOT / Pierrette MILOT
+Round 6
+        Marie BOURE / Pierrette MILOT VS Corinne BERTHELOT / Isabelle LOREAL
+        Yilin ZHOU / VIDE2 VS Noémie PAJOT / VIDE1
+Round 7
+        Marie BOURE / Corinne BERTHELOT VS Yilin ZHOU / Noémie PAJOT
+        Pierrette MILOT / Isabelle LOREAL VS VIDE1 / VIDE2
+
+
+
+Pool HOMMES - Compétition - Poule A
+Round 1
+        Axel / Maxime VS Nicola / Pierre
+        Renaud / Julien VS Bastien / Jules
+Round 2
+        Axel / Bastien VS Nicola / Renaud
+        Jules / Maxime VS Pierre / Julien
+Round 3
+        Axel / Nicola VS Renaud / Bastien
+        Jules / Julien VS Pierre / Maxime
+Round 4
+        Axel / Renaud VS Nicola / Bastien
+        Jules / Pierre VS Maxime / Julien
+Round 5
+        Axel / Pierre VS Bastien / Julien
+        Nicola / Maxime VS Renaud / Jules
+Round 6
+        Axel / Jules VS Bastien / Maxime
+        Nicola / Julien VS Renaud / Pierre
+Round 7
+        Axel / Julien VS Nicola / Jules
+        Renaud / Maxime VS Bastien / Pierre
+
+Pool HOMMES - Compétition - Poule B
+Round 1
+        Daniel / Bernard VS Renaud / Théo
+        Emmanuel / Samuel VS Vincent / Pierre
+Round 2
+        Daniel / Pierre VS Renaud / Vincent
+        Bernard / Samuel VS Théo / Emmanuel
+Round 3
+        Daniel / Vincent VS Théo / Samuel
+        Renaud / Pierre VS Bernard / Emmanuel
+Round 4
+        Daniel / Renaud VS Bernard / Théo
+        Emmanuel / Pierre VS Vincent / Samuel
+Round 5
+        Daniel / Théo VS Renaud / Bernard
+        Emmanuel / Vincent VS Pierre / Samuel
+Round 6
+        Daniel / Emmanuel VS Théo / Pierre
+        Renaud / Samuel VS Bernard / Vincent
+Round 7
+        Daniel / Samuel VS Renaud / Emmanuel
+        Bernard / Pierre VS Théo / Vincent
+
+Pool FEMMES - Compétition - Poule A
+Round 1
+        Lucile / Margaux VS Astrid / Tiphaine
+        Myriam / VIDE1 VS Mégane / Aude
+Round 2
+        Lucile / Mégane VS Astrid / Myriam
+        Aude / VIDE1 VS Tiphaine / Margaux
+Round 3
+        Lucile / Tiphaine VS Mégane / VIDE1
+        Astrid / Margaux VS Myriam / Aude
+Round 4
+        Lucile / Aude VS Mégane / Margaux
+        Astrid / VIDE1 VS Myriam / Tiphaine
+Round 5
+        Lucile / Myriam VS Astrid / Mégane
+        Aude / Margaux VS Tiphaine / VIDE1
+Round 6
+        Lucile / VIDE1 VS Astrid / Aude
+        Myriam / Margaux VS Mégane / Tiphaine
+Round 7
+        Lucile / Astrid VS Myriam / Mégane
+        Aude / Tiphaine VS Margaux / VIDE1

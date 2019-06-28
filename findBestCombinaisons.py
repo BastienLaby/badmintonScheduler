@@ -123,7 +123,7 @@ POOLS = (
         Player('Aude MIGLIASSO', 73.03),
         Player('Tiphaine CHOTEAU', 22.31),
         Player('Margaux VERDIER', 12.58),
-        Player('VIDE1', 10)
+        Player('VIDE1', 10) #TODO moyenne du tableau ici
     ),
 )
 
