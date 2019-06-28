@@ -7,17 +7,6 @@ import logging as log
 log.basicConfig(format="[%(asctime)s] %(levelname)8s| %(message)s (%(filename)s:%(funcName)s:%(lineno)d)", level=log.INFO)
 
 
-def savePickle(obj, path):
-    with open(path, 'wb') as f:
-        pickler = pickle.Pickler(f, protocol=2)
-        pickler.dump(obj)
-
-def loadPickle(path):
-    with open(path, 'rb') as f:
-        pickler = pickle.Unpickler(f)
-        return pickler.load()
-
-
 log.info('Parsing combinaisons ...')
 
 combinaisons = []

@@ -3,7 +3,7 @@
 import os
 import cProfile
 
-combinaisonsFilepath = os.path.join(os.path.dirname(__file__), 'valid_combinaisons_no_underscore_no_semicolon.txt')
+combinaisonsFilepath = os.path.join(os.path.dirname(__file__), 'valid_combinaisons_nomultiplemeetings.txt')
 
 
 def getCombinaisonRounds(combinaisonStr):
@@ -32,10 +32,10 @@ class Pool(object):
             self.averages.append([])
             for j in range(0, 8):
                 self.averages[i].append((self.players[i].score + self.players[j].score) / 2.0)
-    
+
     def getAverage(self, i, j):
         return self.averages[i][j]
-    
+
     def considerCombinaison(self, combinaisonStr):
         '''
         Consider the given combinaison, and keep its results if this is a better combinaison than the one already stored.
@@ -47,7 +47,7 @@ class Pool(object):
         if not self.bestCombinaison or score < self.bestCombinaisonScore:
             self.bestCombinaison = combinaisonStr
             self.bestCombinaisonScore = score
-    
+
     def printResults(self):
 
         print 'Pool %s' % self.name
@@ -60,71 +60,71 @@ class Pool(object):
 
 POOLS = (
     Pool(
-        'deb_hommes',
-        Player('axel.tran', 618.22),
-        Player('nicola.lugnani', 264.59),
-        Player('renaud.danflous', 83.45),
-        Player('bastien.laby', 22.16),
-        Player('vincent.kauffman', 18.72),
-        Player('pierre.bustingory', 13.78),
-        Player('maxime.philippon', 8),
-        Player('samuel.durand', 1.99) 
+        'HOMMES - Débutant - Poule A',
+        Player('Olivier HERBIN', 0),
+        Player('Enguerran BERNARD', 0),
+        Player('Cédric PETIT GALLEY', 0),
+        Player('Stevens BARGOT', 0),
+        Player('Denis TRIPIER', 0),
+        Player('Gérard LE GOUIL', 0),
+        Player('VIDE1', 0),
+        Player('VIDE2', 0)
     ),
-    # Pool(
-    #     'int_hommes',
-    #     Player('axel.tran', 618.22),
-    #     Player('nicola.lugnani', 264.59),
-    #     Player('renaud.danflous', 83.45),
-    #     Player('bastien.laby', 22.16),
-    #     Player('vincent.kauffman', 18.72),
-    #     Player('pierre.bustingory', 13.78),
-    #     Player('maxime.philippon', 8),
-    #     Player('samuel.durand', 1.99) 
-    # ),
-    # Pool(
-    #     'int_femmes',
-    #     Player('axel.tran', 618.22),
-    #     Player('nicola.lugnani', 264.59),
-    #     Player('renaud.danflous', 83.45),
-    #     Player('bastien.laby', 22.16),
-    #     Player('vincent.kauffman', 18.72),
-    #     Player('pierre.bustingory', 13.78),
-    #     Player('maxime.philippon', 8),
-    #     Player('samuel.durand', 1.99) 
-    # ),
-    # Pool(
-    #     'comp_hommes_1',
-    #     Player('axel.tran', 618.22),
-    #     Player('nicola.lugnani', 264.59),
-    #     Player('renaud.danflous', 83.45),
-    #     Player('bastien.laby', 22.16),
-    #     Player('vincent.kauffman', 18.72),
-    #     Player('pierre.bustingory', 13.78),
-    #     Player('maxime.philippon', 8),
-    #     Player('samuel.durand', 1.99) 
-    # ),
-    # Pool(
-    #     'comp_hommes_2',
-    #     Player('axel.tran', 618.22),
-    #     Player('nicola.lugnani', 264.59),
-    #     Player('renaud.danflous', 83.45),
-    #     Player('bastien.laby', 22.16),
-    #     Player('vincent.kauffman', 18.72),
-    #     Player('pierre.bustingory', 13.78),
-    #     Player('maxime.philippon', 8),
-    #     Player('samuel.durand', 1.99) 
-    # ),
-    # Pool(
-    #     'comp_femmes',
-    #     Player('axel.tran', 618.22),
-    #     Player('nicola.lugnani', 264.59),
-    #     Player('renaud.danflous', 83.45),
-    #     Player('bastien.laby', 22.16),
-    #     Player('vincent.kauffman', 18.72),
-    #     Player('pierre.bustingory', 13.78),
-    #     Player('maxime.philippon', 8),
-    #     Player('samuel.durand', 1.99) 
-    # ),
+    Pool(
+        'HOMMES - Intermédiaire - Poule A',
+        Player('Bruno DE BASTIANI', 0),
+        Player('Jean-Marc BARBAGGIO', 0),
+        Player('Maxime RAGOT', 0),
+        Player('Thierry BRIEN', 0),
+        Player('Aurélien BRAULT', 0),
+        Player('Nouredine SALEH', 0),
+        Player('Guillaume LESPAGNOL', 0),
+        Player('Mickaël DHOURY', 0)
+    ),
+    Pool(
+        'FEMMES - Intermédiaire - Poule A',
+        Player('Marie BOURE', 0),
+        Player('Corinne BERTHELOT', 0),
+        Player('Yilin ZHOU', 0),
+        Player('Noémie PAJOT', 0),
+        Player('Pierrette MILOT', 0),
+        Player('Isabelle LOREAL', 0),
+        Player('VIDE1', 0),
+        Player('VIDE2', 0)
+    ),
+    Pool(
+        'HOMMES - Compétition - Poule A',
+        Player('Axel TRAN', 618.22),
+        Player('Nicola LUGNAGNI', 264.59),
+        Player('Renaud DANFLOUS', 83.45),
+        Player('Bastien LABY', 22.16),
+        Player('Jules BARBAGGIO', 18.72),
+        Player('Pierre BUSTINGORY', 13.78),
+        Player('Maxime PHILIPPON', 8),
+        Player('Julien LEBOIS', 7.48)
+    ),
+    Pool(
+        'HOMMES - Compétition - Poule B',
+        Player('Daniel MARIN', 278.63),
+        Player('Renaud AGNASSE', 217.13),
+        Player('Bernard LAM VAN BA', 167.43),
+        Player('Théo DESAGNAT', 27.47),
+        Player('Emmanuel PATEYRON', 21.92),
+        Player('Vincent KAUFFMANN', 18.72),
+        Player('Pierre SIAUGE', 11.32),
+        Player('Samuel DURAND', 1.99)
+    ),
+    Pool(
+        'FEMMES - Compétition - Poule A',
+        Player('Lucile PATEYRON', 528.57),
+        Player('Astrid GALY-DEJEAN', 395.84),
+        Player('Myriam DIEMER', 358.66),
+        Player('Mégane SIMON', 191.9),
+        Player('Aude MIGLIASSO', 73.03),
+        Player('Tiphaine CHOTEAU', 22.31),
+        Player('Margaux VERDIER', 12.58),
+        Player('VIDE1', 10)
+    ),
 )
 
 
@@ -135,12 +135,9 @@ def main():
         combinaisons = f.readlines()
 
     for pool in POOLS:
-        print 'Compute pool %s' % pool.name
         pool.computeAverages()
         for c, combinaison in enumerate(combinaisons):
             pool.considerCombinaison(combinaison)
-            if not c % 10000:
-                print c * 100 / float(len(combinaisons))
         pool.printResults()
 
     #TODO :

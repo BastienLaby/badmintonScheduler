@@ -62,7 +62,8 @@ def main():
             if max(playerMeetings) > 4:
                 combinaisonIsValid = False
                 break
-            if min(playerMeetings) <= 1:
+            playerMeetings.remove(0) # itself
+            if min(playerMeetings) == 0:
                 combinaisonIsValid = False
                 break
 
